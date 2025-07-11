@@ -34,9 +34,12 @@
       "registry_name": "corrupt_ore",
       "metadata": {
         "files": [
-          "src/main/resources/assets/the_corruptions/blockstates/corrupt_ore.json",
-          "src/main/resources/assets/the_corruptions/models/item/corrupt_ore.json",
           "src/main/resources/assets/the_corruptions/models/block/corrupt_ore.json",
+          "src/main/resources/data/the_corruptions/forge/biome_modifier/corrupt_ore_biome_modifier.json",
+          "src/main/resources/assets/the_corruptions/models/item/corrupt_ore.json",
+          "src/main/resources/data/the_corruptions/worldgen/configured_feature/corrupt_ore.json",
+          "src/main/resources/data/the_corruptions/worldgen/placed_feature/corrupt_ore.json",
+          "src/main/resources/assets/the_corruptions/blockstates/corrupt_ore.json",
           "src/main/java/net/mcreator/thecorruptions/block/CorruptOreBlock.java"
         ]
       }

@@ -11,6 +11,7 @@ import net.minecraftforge.common.extensions.IForgeMenuType;
 
 import net.minecraft.world.inventory.MenuType;
 
+import net.mcreator.thecorruptions.world.inventory.CatraftingtableMenu;
 import net.mcreator.thecorruptions.TheCorruptionsMod;
 
 public class TheCorruptionsModMenus {

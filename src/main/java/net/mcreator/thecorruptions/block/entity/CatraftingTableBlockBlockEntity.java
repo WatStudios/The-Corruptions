@@ -109,8 +109,6 @@ public class CatraftingTableBlockBlockEntity extends RandomizableContainerBlockE
 
 	@Override
 	public boolean canPlaceItem(int index, ItemStack stack) {
-		if (index == 3)
-			return false;
 		if (index == 16)
 			return false;
 		return true;

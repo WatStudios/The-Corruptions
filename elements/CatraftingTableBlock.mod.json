@@ -107,7 +107,7 @@
     "isBonemealable": false,
     "hasInventory": true,
     "guiBoundTo": "Catraftingtable",
-    "openGUIOnRightClick": false,
+    "openGUIOnRightClick": true,
     "inventorySize": 17,
     "inventoryStackSize": 64,
     "inventoryDropWhenDestroyed": true,

@@ -8,11 +8,11 @@
       "registry_name": "pixel_luna",
       "metadata": {
         "files": [
-          "src/main/resources/data/the_corruptions/forge/biome_modifier/pixel_luna_biome_modifier.json",
-          "src/main/java/net/mcreator/thecorruptions/entity/model/PixelLunaModel.java",
           "src/main/java/net/mcreator/thecorruptions/entity/PixelLunaEntity.java",
+          "src/main/java/net/mcreator/thecorruptions/client/renderer/PixelLunaRenderer.java",
+          "src/main/java/net/mcreator/thecorruptions/entity/model/PixelLunaModel.java",
           "src/main/resources/assets/the_corruptions/models/item/pixel_luna_spawn_egg.json",
-          "src/main/java/net/mcreator/thecorruptions/client/renderer/PixelLunaRenderer.java"
+          "src/main/resources/data/the_corruptions/forge/biome_modifier/pixel_luna_biome_modifier.json"
         ]
       }
     },
@@ -160,6 +160,59 @@
           "src/main/resources/assets/the_corruptions/models/item/yellow_voxel.json"
         ]
       }
+    },
+    {
+      "name": "PinkVoxel",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pink_voxel",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/the_corruptions/models/item/pink_voxel.json",
+          "src/main/java/net/mcreator/thecorruptions/item/PinkVoxelItem.java"
+        ]
+      }
+    },
+    {
+      "name": "PixelLunaloot",
+      "type": "loottable",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pixel_lunaloot",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/the_corruptions/loot_tables/entities/pixel_luna.json"
+        ]
+      }
+    },
+    {
+      "name": "Catraftingtable",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "catraftingtable",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/thecorruptions/world/inventory/CatraftingtableMenu.java",
+          "src/main/java/net/mcreator/thecorruptions/client/gui/CatraftingtableScreen.java"
+        ]
+      }
+    },
+    {
+      "name": "CorruptPixelLunaPhase1",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "corrupt_pixel_luna_phase_1",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/thecorruptions/client/renderer/CorruptPixelLunaPhase1Renderer.java",
+          "src/main/java/net/mcreator/thecorruptions/entity/model/CorruptPixelLunaPhase1Model.java",
+          "src/main/java/net/mcreator/thecorruptions/entity/CorruptPixelLunaPhase1Entity.java",
+          "src/main/resources/assets/the_corruptions/models/item/corrupt_pixel_luna_phase_1_spawn_egg.json"
+        ]
+      }
     }
   ],
   "variable_elements": [],
@@ -170,17 +223,21 @@
     "en_us": {
       "death.attack.corrupted.player": "%1$s got corrupted whilst trying to escape %2$s",
       "death.attack.voxelized.player": "%1$s got voxelized whilst trying to escape %2$s",
+      "gui.the_corruptions.catraftingtable.label_catrafting_table": "Cat-rafting Table",
       "death.attack.voxelized": "%1$s was voxelized by %2$s",
       "item.the_corruptions.black_voxel": "Black Voxel",
       "death.attack.corrupted": "%1$s got corrupted",
       "attribute.the_corruptions.is_baby": "Is Baby",
+      "item.the_corruptions.pink_voxel": "Pink Voxel",
       "block.the_corruptions.corrupt_ore": "Corrupt Ore",
       "entity.the_corruptions.pixel_luna": "Pixel Luna",
+      "item.the_corruptions.corrupt_pixel_luna_phase_1_spawn_egg": "Corrupted Pixel Luna Phase 1 Spawn Egg",
       "item.the_corruptions.pixel_luna_spawn_egg": "Pixel Luna Spawn Egg",
       "death.attack.corrupted.item": "%1$s was corrupted by %2$s using %3$s",
       "death.attack.voxelized.item": "%1$s was voxelized by %2$s using %3$s",
       "item.the_corruptions.corrupted_orb": "Corrupted Orb",
-      "item.the_corruptions.yellow_voxel": "Black Voxel"
+      "item.the_corruptions.yellow_voxel": "Yellow Voxel",
+      "entity.the_corruptions.corrupt_pixel_luna_phase_1": "Corrupted Pixel Luna Phase 1"
     }
   },
   "foldersRoot": {

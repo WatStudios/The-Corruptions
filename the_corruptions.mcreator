@@ -213,6 +213,19 @@
           "src/main/resources/assets/the_corruptions/models/item/corrupt_pixel_luna_phase_1_spawn_egg.json"
         ]
       }
+    },
+    {
+      "name": "CatraftingtableWhileThisGUIIsOpenTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "catraftingtable_while_this_gui_is_open_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/thecorruptions/procedures/CatraftingtableWhileThisGUIIsOpenTickProcedure.java"
+        ],
+        "dependencies": []
+      }
     }
   ],
   "variable_elements": [],

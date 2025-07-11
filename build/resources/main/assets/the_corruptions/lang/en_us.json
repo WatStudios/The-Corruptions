@@ -1,0 +1,16 @@
+{
+  "death.attack.corrupted.player": "%1$s got corrupted whilst trying to escape %2$s",
+  "death.attack.voxelized.player": "%1$s got voxelized whilst trying to escape %2$s",
+  "death.attack.voxelized": "%1$s was voxelized by %2$s",
+  "item.the_corruptions.black_voxel": "Black Voxel",
+  "death.attack.corrupted": "%1$s got corrupted",
+  "attribute.the_corruptions.is_baby": "Is Baby",
+  "item.the_corruptions.pink_voxel": "Pink Voxel",
+  "block.the_corruptions.corrupt_ore": "Corrupt Ore",
+  "entity.the_corruptions.pixel_luna": "Pixel Luna",
+  "item.the_corruptions.pixel_luna_spawn_egg": "Pixel Luna Spawn Egg",
+  "death.attack.corrupted.item": "%1$s was corrupted by %2$s using %3$s",
+  "death.attack.voxelized.item": "%1$s was voxelized by %2$s using %3$s",
+  "item.the_corruptions.corrupted_orb": "Corrupted Orb",
+  "item.the_corruptions.yellow_voxel": "Yellow Voxel"
+}

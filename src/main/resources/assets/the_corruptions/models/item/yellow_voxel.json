@@ -1,0 +1,7 @@
+{
+  "parent": "the_corruptions:custom/voxely",
+  "textures": {
+    "0": "the_corruptions:block/yellowvoxel",
+    "particle": "the_corruptions:item/yellowvoxel"
+  }
+}

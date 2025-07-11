@@ -1,0 +1,7 @@
+{
+  "parent": "the_corruptions:custom/voxelp",
+  "textures": {
+    "0": "the_corruptions:block/pinkvoxel",
+    "particle": "the_corruptions:item/pinkvoxel"
+  }
+}

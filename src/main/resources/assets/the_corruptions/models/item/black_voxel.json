@@ -1,0 +1,7 @@
+{
+  "parent": "the_corruptions:custom/voxel",
+  "textures": {
+    "0": "the_corruptions:block/blackvoxel",
+    "particle": "the_corruptions:item/blackvoxel"
+  }
+}

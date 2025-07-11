@@ -9,9 +9,11 @@
   "item.the_corruptions.pink_voxel": "Pink Voxel",
   "block.the_corruptions.corrupt_ore": "Corrupt Ore",
   "entity.the_corruptions.pixel_luna": "Pixel Luna",
+  "item.the_corruptions.corrupt_pixel_luna_phase_1_spawn_egg": "Pixel Luna Spawn Egg",
   "item.the_corruptions.pixel_luna_spawn_egg": "Pixel Luna Spawn Egg",
   "death.attack.corrupted.item": "%1$s was corrupted by %2$s using %3$s",
   "death.attack.voxelized.item": "%1$s was voxelized by %2$s using %3$s",
   "item.the_corruptions.corrupted_orb": "Corrupted Orb",
-  "item.the_corruptions.yellow_voxel": "Yellow Voxel"
+  "item.the_corruptions.yellow_voxel": "Yellow Voxel",
+  "entity.the_corruptions.corrupt_pixel_luna_phase_1": "Pixel Luna"
 }

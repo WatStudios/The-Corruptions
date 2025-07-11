@@ -17,6 +17,7 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 
 import net.mcreator.thecorruptions.entity.PixelLunaEntity;
+import net.mcreator.thecorruptions.entity.CorruptPixelLunaPhase1Entity;
 import net.mcreator.thecorruptions.TheCorruptionsMod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -24,6 +25,11 @@ public class TheCorruptionsModEntities {
 	public static final DeferredRegister<EntityType<?>> REGISTRY = DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, TheCorruptionsMod.MODID);
 	public static final RegistryObject<EntityType<PixelLunaEntity>> PIXEL_LUNA = register("pixel_luna",
 			EntityType.Builder.<PixelLunaEntity>of(PixelLunaEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(PixelLunaEntity::new)
+
+					.sized(0.3f, 0.3f));
+	public static final RegistryObject<EntityType<CorruptPixelLunaPhase1Entity>> CORRUPT_PIXEL_LUNA_PHASE_1 = register("corrupt_pixel_luna_phase_1",
+			EntityType.Builder.<CorruptPixelLunaPhase1Entity>of(CorruptPixelLunaPhase1Entity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
+					.setCustomClientFactory(CorruptPixelLunaPhase1Entity::new)
 
 					.sized(0.3f, 0.3f));
 
@@ -37,11 +43,13 @@ public class TheCorruptionsModEntities {
 	public static void init(FMLCommonSetupEvent event) {
 		event.enqueueWork(() -> {
 			PixelLunaEntity.init();
+			CorruptPixelLunaPhase1Entity.init();
 		});
 	}
 
 	@SubscribeEvent
 	public static void registerAttributes(EntityAttributeCreationEvent event) {
 		event.put(PIXEL_LUNA.get(), PixelLunaEntity.createAttributes().build());
+		event.put(CORRUPT_PIXEL_LUNA_PHASE_1.get(), CorruptPixelLunaPhase1Entity.createAttributes().build());
 	}
 }

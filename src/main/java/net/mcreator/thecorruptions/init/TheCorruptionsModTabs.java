@@ -23,6 +23,7 @@ public class TheCorruptionsModTabs {
 	public static void buildTabContentsVanilla(BuildCreativeModeTabContentsEvent tabData) {
 		if (tabData.getTabKey() == CreativeModeTabs.SPAWN_EGGS) {
 			tabData.accept(TheCorruptionsModItems.PIXEL_LUNA_SPAWN_EGG.get());
+			tabData.accept(TheCorruptionsModItems.CORRUPT_PIXEL_LUNA_PHASE_1_SPAWN_EGG.get());
 		} else if (tabData.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {
 			tabData.accept(TheCorruptionsModBlocks.CORRUPT_ORE.get().asItem());
 		} else if (tabData.getTabKey() == CreativeModeTabs.INGREDIENTS) {

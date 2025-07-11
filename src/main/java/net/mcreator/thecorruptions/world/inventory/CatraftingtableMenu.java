@@ -4,6 +4,9 @@ package net.mcreator.thecorruptions.world.inventory;
 import net.minecraftforge.items.SlotItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
 import net.minecraftforge.items.IItemHandler;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.common.capabilities.ForgeCapabilities;
 
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -19,12 +22,14 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
+import net.mcreator.thecorruptions.procedures.CatraftingtableWhileThisGUIIsOpenTickProcedure;
 import net.mcreator.thecorruptions.init.TheCorruptionsModMenus;
 
 import java.util.function.Supplier;
 import java.util.Map;
 import java.util.HashMap;
 
+@Mod.EventBusSubscriber
 public class CatraftingtableMenu extends AbstractContainerMenu implements Supplier<Map<Integer, Slot>> {
 	public final static HashMap<String, Object> guistate = new HashMap<>();
 	public final Level world;
@@ -42,7 +47,7 @@ public class CatraftingtableMenu extends AbstractContainerMenu implements Suppli
 		super(TheCorruptionsModMenus.CATRAFTINGTABLE.get(), id);
 		this.entity = inv.player;
 		this.world = inv.player.level();
-		this.internal = new ItemStackHandler(31);
+		this.internal = new ItemStackHandler(17);
 		BlockPos pos = null;
 		if (extraData != null) {
 			pos = extraData.readBlockPos();
@@ -77,22 +82,22 @@ public class CatraftingtableMenu extends AbstractContainerMenu implements Suppli
 					});
 			}
 		}
-		this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 44, 22) {
+		this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 44, 31) {
 			private final int slot = 0;
 			private int x = CatraftingtableMenu.this.x;
 			private int y = CatraftingtableMenu.this.y;
 		}));
-		this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 62, 22) {
+		this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 62, 31) {
 			private final int slot = 1;
 			private int x = CatraftingtableMenu.this.x;
 			private int y = CatraftingtableMenu.this.y;
 		}));
-		this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 80, 22) {
+		this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 80, 31) {
 			private final int slot = 2;
 			private int x = CatraftingtableMenu.this.x;
 			private int y = CatraftingtableMenu.this.y;
 		}));
-		this.customSlots.put(3, this.addSlot(new SlotItemHandler(internal, 3, 44, 40) {
+		this.customSlots.put(3, this.addSlot(new SlotItemHandler(internal, 3, 98, 31) {
 			private final int slot = 3;
 			private int x = CatraftingtableMenu.this.x;
 			private int y = CatraftingtableMenu.this.y;
@@ -102,138 +107,68 @@ public class CatraftingtableMenu extends AbstractContainerMenu implements Suppli
 				return false;
 			}
 		}));
-		this.customSlots.put(4, this.addSlot(new SlotItemHandler(internal, 4, 62, 40) {
+		this.customSlots.put(4, this.addSlot(new SlotItemHandler(internal, 4, 44, 49) {
 			private final int slot = 4;
 			private int x = CatraftingtableMenu.this.x;
 			private int y = CatraftingtableMenu.this.y;
 		}));
-		this.customSlots.put(5, this.addSlot(new SlotItemHandler(internal, 5, 80, 40) {
+		this.customSlots.put(5, this.addSlot(new SlotItemHandler(internal, 5, 62, 49) {
 			private final int slot = 5;
 			private int x = CatraftingtableMenu.this.x;
 			private int y = CatraftingtableMenu.this.y;
 		}));
-		this.customSlots.put(6, this.addSlot(new SlotItemHandler(internal, 6, 44, 58) {
+		this.customSlots.put(6, this.addSlot(new SlotItemHandler(internal, 6, 80, 49) {
 			private final int slot = 6;
 			private int x = CatraftingtableMenu.this.x;
 			private int y = CatraftingtableMenu.this.y;
 		}));
-		this.customSlots.put(7, this.addSlot(new SlotItemHandler(internal, 7, 62, 58) {
+		this.customSlots.put(7, this.addSlot(new SlotItemHandler(internal, 7, 98, 49) {
 			private final int slot = 7;
 			private int x = CatraftingtableMenu.this.x;
 			private int y = CatraftingtableMenu.this.y;
 		}));
-		this.customSlots.put(8, this.addSlot(new SlotItemHandler(internal, 8, 80, 58) {
+		this.customSlots.put(8, this.addSlot(new SlotItemHandler(internal, 8, 44, 67) {
 			private final int slot = 8;
 			private int x = CatraftingtableMenu.this.x;
 			private int y = CatraftingtableMenu.this.y;
 		}));
-		this.customSlots.put(9, this.addSlot(new SlotItemHandler(internal, 9, 44, 76) {
+		this.customSlots.put(9, this.addSlot(new SlotItemHandler(internal, 9, 62, 67) {
 			private final int slot = 9;
 			private int x = CatraftingtableMenu.this.x;
 			private int y = CatraftingtableMenu.this.y;
 		}));
-		this.customSlots.put(10, this.addSlot(new SlotItemHandler(internal, 10, 62, 76) {
+		this.customSlots.put(10, this.addSlot(new SlotItemHandler(internal, 10, 80, 67) {
 			private final int slot = 10;
 			private int x = CatraftingtableMenu.this.x;
 			private int y = CatraftingtableMenu.this.y;
 		}));
-		this.customSlots.put(11, this.addSlot(new SlotItemHandler(internal, 11, 80, 76) {
+		this.customSlots.put(11, this.addSlot(new SlotItemHandler(internal, 11, 98, 67) {
 			private final int slot = 11;
 			private int x = CatraftingtableMenu.this.x;
 			private int y = CatraftingtableMenu.this.y;
 		}));
-		this.customSlots.put(12, this.addSlot(new SlotItemHandler(internal, 12, 44, 94) {
+		this.customSlots.put(12, this.addSlot(new SlotItemHandler(internal, 12, 44, 85) {
 			private final int slot = 12;
 			private int x = CatraftingtableMenu.this.x;
 			private int y = CatraftingtableMenu.this.y;
 		}));
-		this.customSlots.put(13, this.addSlot(new SlotItemHandler(internal, 13, 62, 94) {
+		this.customSlots.put(13, this.addSlot(new SlotItemHandler(internal, 13, 62, 85) {
 			private final int slot = 13;
 			private int x = CatraftingtableMenu.this.x;
 			private int y = CatraftingtableMenu.this.y;
 		}));
-		this.customSlots.put(14, this.addSlot(new SlotItemHandler(internal, 14, 80, 94) {
+		this.customSlots.put(14, this.addSlot(new SlotItemHandler(internal, 14, 80, 85) {
 			private final int slot = 14;
 			private int x = CatraftingtableMenu.this.x;
 			private int y = CatraftingtableMenu.this.y;
 		}));
-		this.customSlots.put(15, this.addSlot(new SlotItemHandler(internal, 15, 98, 22) {
+		this.customSlots.put(15, this.addSlot(new SlotItemHandler(internal, 15, 98, 85) {
 			private final int slot = 15;
 			private int x = CatraftingtableMenu.this.x;
 			private int y = CatraftingtableMenu.this.y;
 		}));
-		this.customSlots.put(16, this.addSlot(new SlotItemHandler(internal, 16, 116, 22) {
+		this.customSlots.put(16, this.addSlot(new SlotItemHandler(internal, 16, 179, 58) {
 			private final int slot = 16;
-			private int x = CatraftingtableMenu.this.x;
-			private int y = CatraftingtableMenu.this.y;
-		}));
-		this.customSlots.put(17, this.addSlot(new SlotItemHandler(internal, 17, 134, 22) {
-			private final int slot = 17;
-			private int x = CatraftingtableMenu.this.x;
-			private int y = CatraftingtableMenu.this.y;
-		}));
-		this.customSlots.put(18, this.addSlot(new SlotItemHandler(internal, 18, 98, 40) {
-			private final int slot = 18;
-			private int x = CatraftingtableMenu.this.x;
-			private int y = CatraftingtableMenu.this.y;
-		}));
-		this.customSlots.put(19, this.addSlot(new SlotItemHandler(internal, 19, 98, 58) {
-			private final int slot = 19;
-			private int x = CatraftingtableMenu.this.x;
-			private int y = CatraftingtableMenu.this.y;
-		}));
-		this.customSlots.put(20, this.addSlot(new SlotItemHandler(internal, 20, 98, 76) {
-			private final int slot = 20;
-			private int x = CatraftingtableMenu.this.x;
-			private int y = CatraftingtableMenu.this.y;
-		}));
-		this.customSlots.put(21, this.addSlot(new SlotItemHandler(internal, 21, 98, 94) {
-			private final int slot = 21;
-			private int x = CatraftingtableMenu.this.x;
-			private int y = CatraftingtableMenu.this.y;
-		}));
-		this.customSlots.put(22, this.addSlot(new SlotItemHandler(internal, 22, 116, 40) {
-			private final int slot = 22;
-			private int x = CatraftingtableMenu.this.x;
-			private int y = CatraftingtableMenu.this.y;
-		}));
-		this.customSlots.put(23, this.addSlot(new SlotItemHandler(internal, 23, 116, 58) {
-			private final int slot = 23;
-			private int x = CatraftingtableMenu.this.x;
-			private int y = CatraftingtableMenu.this.y;
-		}));
-		this.customSlots.put(24, this.addSlot(new SlotItemHandler(internal, 24, 116, 76) {
-			private final int slot = 24;
-			private int x = CatraftingtableMenu.this.x;
-			private int y = CatraftingtableMenu.this.y;
-		}));
-		this.customSlots.put(25, this.addSlot(new SlotItemHandler(internal, 25, 116, 94) {
-			private final int slot = 25;
-			private int x = CatraftingtableMenu.this.x;
-			private int y = CatraftingtableMenu.this.y;
-		}));
-		this.customSlots.put(26, this.addSlot(new SlotItemHandler(internal, 26, 134, 40) {
-			private final int slot = 26;
-			private int x = CatraftingtableMenu.this.x;
-			private int y = CatraftingtableMenu.this.y;
-		}));
-		this.customSlots.put(27, this.addSlot(new SlotItemHandler(internal, 27, 134, 58) {
-			private final int slot = 27;
-			private int x = CatraftingtableMenu.this.x;
-			private int y = CatraftingtableMenu.this.y;
-		}));
-		this.customSlots.put(28, this.addSlot(new SlotItemHandler(internal, 28, 134, 76) {
-			private final int slot = 28;
-			private int x = CatraftingtableMenu.this.x;
-			private int y = CatraftingtableMenu.this.y;
-		}));
-		this.customSlots.put(29, this.addSlot(new SlotItemHandler(internal, 29, 134, 94) {
-			private final int slot = 29;
-			private int x = CatraftingtableMenu.this.x;
-			private int y = CatraftingtableMenu.this.y;
-		}));
-		this.customSlots.put(30, this.addSlot(new SlotItemHandler(internal, 30, 188, 58) {
-			private final int slot = 30;
 			private int x = CatraftingtableMenu.this.x;
 			private int y = CatraftingtableMenu.this.y;
 
@@ -269,16 +204,16 @@ public class CatraftingtableMenu extends AbstractContainerMenu implements Suppli
 		if (slot != null && slot.hasItem()) {
 			ItemStack itemstack1 = slot.getItem();
 			itemstack = itemstack1.copy();
-			if (index < 31) {
-				if (!this.moveItemStackTo(itemstack1, 31, this.slots.size(), true))
+			if (index < 17) {
+				if (!this.moveItemStackTo(itemstack1, 17, this.slots.size(), true))
 					return ItemStack.EMPTY;
 				slot.onQuickCraft(itemstack1, itemstack);
-			} else if (!this.moveItemStackTo(itemstack1, 0, 31, false)) {
-				if (index < 31 + 27) {
-					if (!this.moveItemStackTo(itemstack1, 31 + 27, this.slots.size(), true))
+			} else if (!this.moveItemStackTo(itemstack1, 0, 17, false)) {
+				if (index < 17 + 27) {
+					if (!this.moveItemStackTo(itemstack1, 17 + 27, this.slots.size(), true))
 						return ItemStack.EMPTY;
 				} else {
-					if (!this.moveItemStackTo(itemstack1, 31, 31 + 27, false))
+					if (!this.moveItemStackTo(itemstack1, 17, 17 + 27, false))
 						return ItemStack.EMPTY;
 				}
 				return ItemStack.EMPTY;
@@ -388,5 +323,17 @@ public class CatraftingtableMenu extends AbstractContainerMenu implements Suppli
 
 	public Map<Integer, Slot> get() {
 		return customSlots;
+	}
+
+	@SubscribeEvent
+	public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
+		Player entity = event.player;
+		if (event.phase == TickEvent.Phase.END && entity.containerMenu instanceof CatraftingtableMenu) {
+			Level world = entity.level();
+			double x = entity.getX();
+			double y = entity.getY();
+			double z = entity.getZ();
+			CatraftingtableWhileThisGUIIsOpenTickProcedure.execute();
+		}
 	}
 }

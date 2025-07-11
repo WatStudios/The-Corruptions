@@ -1,5 +1,6 @@
 {
   "death.attack.corrupted.player": "%1$s got corrupted whilst trying to escape %2$s",
+  "block.the_corruptions.catrafting_table_block": "Catrafting Table Block",
   "death.attack.voxelized.player": "%1$s got voxelized whilst trying to escape %2$s",
   "gui.the_corruptions.catraftingtable.label_catrafting_table": "Cat-rafting Table",
   "death.attack.voxelized": "%1$s was voxelized by %2$s",

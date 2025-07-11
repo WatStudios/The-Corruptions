@@ -11,6 +11,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.Block;
 
+import net.mcreator.thecorruptions.block.entity.CatraftingTableBlockBlockEntity;
 import net.mcreator.thecorruptions.TheCorruptionsMod;
 
 public class TheCorruptionsModBlockEntities {

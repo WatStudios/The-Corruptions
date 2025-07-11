@@ -11,6 +11,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraft.world.level.block.Block;
 
 import net.mcreator.thecorruptions.block.CorruptOreBlock;
+import net.mcreator.thecorruptions.block.CatraftingTableBlockBlock;
 import net.mcreator.thecorruptions.TheCorruptionsMod;
 
 public class TheCorruptionsModBlocks {

@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "the_corruptions:block/catraftingtablebottom",
+    "up": "the_corruptions:block/catraftingtabletop",
+    "north": "the_corruptions:block/catraftingtableside",
+    "east": "the_corruptions:block/catraftingtableside",
+    "south": "the_corruptions:block/catraftingtableside",
+    "west": "the_corruptions:block/catraftingtableside",
+    "particle": "the_corruptions:block/catraftingtablebottom"
+  },
+  "render_type": "solid"
+}

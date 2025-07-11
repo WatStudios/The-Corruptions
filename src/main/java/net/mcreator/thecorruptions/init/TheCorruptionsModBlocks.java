@@ -16,6 +16,7 @@ import net.mcreator.thecorruptions.TheCorruptionsMod;
 public class TheCorruptionsModBlocks {
 	public static final DeferredRegister<Block> REGISTRY = DeferredRegister.create(ForgeRegistries.BLOCKS, TheCorruptionsMod.MODID);
 	public static final RegistryObject<Block> CORRUPT_ORE = REGISTRY.register("corrupt_ore", () -> new CorruptOreBlock());
+	public static final RegistryObject<Block> CATRAFTING_TABLE_BLOCK = REGISTRY.register("catrafting_table_block", () -> new CatraftingTableBlockBlock());
 	// Start of user code block custom blocks
 	// End of user code block custom blocks
 }

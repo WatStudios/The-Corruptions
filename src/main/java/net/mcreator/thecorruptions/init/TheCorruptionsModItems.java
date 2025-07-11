@@ -29,6 +29,7 @@ public class TheCorruptionsModItems {
 	public static final RegistryObject<Item> PINK_VOXEL = REGISTRY.register("pink_voxel", () -> new PinkVoxelItem());
 	public static final RegistryObject<Item> CORRUPT_PIXEL_LUNA_PHASE_1_SPAWN_EGG = REGISTRY.register("corrupt_pixel_luna_phase_1_spawn_egg",
 			() -> new ForgeSpawnEggItem(TheCorruptionsModEntities.CORRUPT_PIXEL_LUNA_PHASE_1, -13434829, -3407668, new Item.Properties()));
+	public static final RegistryObject<Item> CATRAFTING_TABLE_BLOCK = block(TheCorruptionsModBlocks.CATRAFTING_TABLE_BLOCK);
 
 	// Start of user code block custom items
 	// End of user code block custom items

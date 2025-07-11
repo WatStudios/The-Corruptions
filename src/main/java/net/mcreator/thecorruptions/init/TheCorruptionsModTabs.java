@@ -28,6 +28,8 @@ public class TheCorruptionsModTabs {
 			tabData.accept(TheCorruptionsModBlocks.CORRUPT_ORE.get().asItem());
 		} else if (tabData.getTabKey() == CreativeModeTabs.INGREDIENTS) {
 			tabData.accept(TheCorruptionsModItems.CORRUPTED_ORB.get());
+		} else if (tabData.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS) {
+			tabData.accept(TheCorruptionsModBlocks.CATRAFTING_TABLE_BLOCK.get().asItem());
 		}
 	}
 }

@@ -22,6 +22,7 @@ import net.mcreator.thecorruptions.init.TheCorruptionsModMenus;
 import net.mcreator.thecorruptions.init.TheCorruptionsModItems;
 import net.mcreator.thecorruptions.init.TheCorruptionsModEntities;
 import net.mcreator.thecorruptions.init.TheCorruptionsModBlocks;
+import net.mcreator.thecorruptions.init.TheCorruptionsModBlockEntities;
 import net.mcreator.thecorruptions.init.TheCorruptionsModAttributes;
 
 import java.util.function.Supplier;
@@ -45,7 +46,7 @@ public class TheCorruptionsMod {
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 
 		TheCorruptionsModBlocks.REGISTRY.register(bus);
-
+		TheCorruptionsModBlockEntities.REGISTRY.register(bus);
 		TheCorruptionsModItems.REGISTRY.register(bus);
 		TheCorruptionsModEntities.REGISTRY.register(bus);
 

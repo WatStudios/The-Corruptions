@@ -97,16 +97,6 @@ public class CatraftingtableMenu extends AbstractContainerMenu implements Suppli
 			private int x = CatraftingtableMenu.this.x;
 			private int y = CatraftingtableMenu.this.y;
 		}));
-		this.customSlots.put(3, this.addSlot(new SlotItemHandler(internal, 3, 98, 31) {
-			private final int slot = 3;
-			private int x = CatraftingtableMenu.this.x;
-			private int y = CatraftingtableMenu.this.y;
-
-			@Override
-			public boolean mayPlace(ItemStack stack) {
-				return false;
-			}
-		}));
 		this.customSlots.put(4, this.addSlot(new SlotItemHandler(internal, 4, 44, 49) {
 			private final int slot = 4;
 			private int x = CatraftingtableMenu.this.x;
@@ -176,6 +166,11 @@ public class CatraftingtableMenu extends AbstractContainerMenu implements Suppli
 			public boolean mayPlace(ItemStack stack) {
 				return false;
 			}
+		}));
+		this.customSlots.put(3, this.addSlot(new SlotItemHandler(internal, 3, 98, 31) {
+			private final int slot = 3;
+			private int x = CatraftingtableMenu.this.x;
+			private int y = CatraftingtableMenu.this.y;
 		}));
 		for (int si = 0; si < 3; ++si)
 			for (int sj = 0; sj < 9; ++sj)

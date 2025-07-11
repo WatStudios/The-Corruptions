@@ -106,6 +106,9 @@
     "raidCelebrationSound": {
       "value": ""
     },
+    "onRightClickedOn": {
+      "name": "PixelLunaRightClickedOnEntity"
+    },
     "whenThisMobKillsAnother": {
       "name": "PixelLunaThisEntityKillsAnotherOne"
     },

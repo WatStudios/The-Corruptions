@@ -132,6 +132,8 @@ public class CatraftingTableBlockBlockEntity extends RandomizableContainerBlockE
 			return false;
 		if (index == 2)
 			return false;
+		if (index == 3)
+			return false;
 		if (index == 4)
 			return false;
 		if (index == 5)

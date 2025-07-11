@@ -65,6 +65,7 @@ import net.minecraft.network.protocol.Packet;
 import net.minecraft.nbt.CompoundTag;
 
 import net.mcreator.thecorruptions.procedures.PixelLunaThisEntityKillsAnotherOneProcedure;
+import net.mcreator.thecorruptions.procedures.PixelLunaRightClickedOnEntityProcedure;
 import net.mcreator.thecorruptions.init.TheCorruptionsModEntities;
 
 import java.util.List;
@@ -210,6 +211,13 @@ public class PixelLunaEntity extends TamableAnimal implements GeoEntity {
 					this.setPersistenceRequired();
 			}
 		}
+		double x = this.getX();
+		double y = this.getY();
+		double z = this.getZ();
+		Entity entity = this;
+		Level world = this.level();
+
+		PixelLunaRightClickedOnEntityProcedure.execute(world, x, y, z, entity);
 		return retval;
 	}
 
